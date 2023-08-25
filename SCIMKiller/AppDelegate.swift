@@ -63,6 +63,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         } catch {
             print("Failed to execute shell command")
         }
+
+        let task2 = Process()
+        task2.launchPath = "/bin/sh"
+        task2.arguments = ["-c", "kill -9 $(pgrep SCIM_Extension)"]
+
+        do {
+            try task2.run()
+            print("SCIM process killed")
+        } catch {
+            print("Failed to execute shell command")
+        }
     }
 
     @objc func quitClicked() {
