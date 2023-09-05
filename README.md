@@ -6,7 +6,7 @@ One-click button on menu bar to kill the SCIM / SCIM_Extension process when you 
 
 __> Why is this better than running the command in terminal?__
 
-You termimal app could be frozen too when the rainbow spinwheel appears, while menubar buttons are __always__ responsive.
+Your termimal app could be frozen too when the rainbow spinwheel appears, while menubar buttons are __always__ responsive.
 
 ----
 
