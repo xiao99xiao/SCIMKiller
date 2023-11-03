@@ -55,7 +55,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func killSCIM() {
         let task = Process()
         task.launchPath = "/bin/sh"
-        task.arguments = ["-c", "kill -9 $(pgrep SCIM)"]
+        task.arguments = ["-c", "/usr/bin/pkill -9 SCIM"]
 
         do {
             try task.run()
@@ -66,7 +66,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         let task2 = Process()
         task2.launchPath = "/bin/sh"
-        task2.arguments = ["-c", "kill -9 $(pgrep SCIM_Extension)"]
+        task2.arguments = ["-c", "/usr/bin/pkill -9 SCIM_Extension"]
 
         do {
             try task2.run()
