@@ -53,26 +53,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc func killSCIM() {
-        let task = Process()
-        task.launchPath = "/bin/sh"
-        task.arguments = ["-c", "/usr/bin/pkill -9 SCIM"]
-
-        do {
-            try task.run()
-            print("SCIM process killed")
-        } catch {
-            print("Failed to execute shell command")
-        }
-
-        let task2 = Process()
-        task2.launchPath = "/bin/sh"
-        task2.arguments = ["-c", "/usr/bin/pkill -9 SCIM_Extension"]
-
-        do {
-            try task2.run()
-            print("SCIM process killed")
-        } catch {
-            print("Failed to execute shell command")
+        let processesToKill = [
+            "SCIM",
+            "SCIM_Extension",
+            "TCIM",
+            "TCIM_Extension"
+        ]
+        processesToKill.forEach { processName in
+            let task = Process()
+            task.launchPath = "/bin/sh"
+            task.arguments = ["-c", "/usr/bin/pkill -9 \(processName)"]
+            try? task.run()
         }
     }
 
