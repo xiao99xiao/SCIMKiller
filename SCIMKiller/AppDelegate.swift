@@ -34,7 +34,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusBarItem = statusBar.statusItem(withLength: NSStatusItem.variableLength)
 
         if let button = statusBarItem.button {
-            button.image = NSImage(systemSymbolName: "pill.circle.fill", accessibilityDescription: "Kill SCIM")
+            if #available(macOS 13, *) {
+                button.image = NSImage(systemSymbolName: "pill.circle.fill", accessibilityDescription: "Terminate SCIM/TCIM & Extension")
+            } else {
+                button.image = NSImage(named: "pill.circle.fill")
+                button.toolTip = "Terminate SCIM/TCIM & Extension"
+            }
             button.action = #selector(killSCIM)
             button.target = self
         }
