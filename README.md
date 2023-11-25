@@ -2,12 +2,18 @@
 
 Made by [Xiao](https://twitter.com/im_xiaoxiao?s=21&t=XJpCR5_Zz-_ZrjlQ-qYFrQ)
 
-One-click button on menu bar to kill the SCIM / SCIM_Extension process when you see a rainbow spinwheel on macOS.
+## What is this?
 
-__> Why is this better than running the command in terminal?__
+A button on macOS menu bar to kill the SCIM / SCIM_Extension (and TCIM / TCIM_Extension for Traditional Chinese IME) processes any time when you see a rainbow spinwheel on macOS and all UI get stuck.
 
-Your termimal app could be frozen too when the rainbow spinwheel appears, while menubar buttons are __always__ responsive.
+## But why?
 
-----
+Embeded Chinese IME on macOS sometimes just stuck the whole system UI for no reason. The only way to fix it right now is to kill the IME process(es).
 
-[Download latest build](https://github.com/xiao99xiao/SCIMKiller/releases)
+## But why SCIMKiller?
+
+Termimal app could be frozen too when the rainbow spinwheel appears, while menubar buttons are __always__ responsive for interaction.
+
+## How to use?
+
+[Download](https://github.com/xiao99xiao/SCIMKiller/releases), unzip, and drag the app to Applications folder.
