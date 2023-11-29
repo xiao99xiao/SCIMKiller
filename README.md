@@ -12,7 +12,7 @@ Embeded Chinese IME on macOS sometimes just stuck the whole system UI for no rea
 
 ## But why SCIMKiller?
 
-Termimal app could be frozen too when the rainbow spinwheel appears, while menubar buttons are __always__ responsive for interaction.
+Terminal apps could be unresponsive as well when the rainbow spinwheel appears, while menubar buttons are __always__ responsive for interaction.
 
 ## How to use?
 
